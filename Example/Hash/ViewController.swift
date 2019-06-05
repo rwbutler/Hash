@@ -7,12 +7,16 @@
 //
 
 import UIKit
+import Hash
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        if let messageDigest = Hash(message: "Hello World!", algorithm: .sha256) {
+            print(messageDigest.string())
+        }
     }
 
     override func didReceiveMemoryWarning() {

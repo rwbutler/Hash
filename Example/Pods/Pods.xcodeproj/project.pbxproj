@@ -417,6 +417,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0DA449A2E999FC7FD661AD4CB70B52DB /* Hash.xcconfig */;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -584,6 +585,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0DA449A2E999FC7FD661AD4CB70B52DB /* Hash.xcconfig */;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";

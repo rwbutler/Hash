@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name             = 'Hash'
-s.version          = '0.0.1'
+s.version          = '0.0.2'
 s.swift_version    = '5.0'
 s.summary          = 'Lightweight means of hashing Data and Strings using popular hash functions including MD5, SHA-1, SHA-256.'
 s.description      = <<-DESC
