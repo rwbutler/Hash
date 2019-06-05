@@ -1,0 +1,16 @@
+PODS:
+  - Hash (0.1.0)
+
+DEPENDENCIES:
+  - Hash (from `../`)
+
+EXTERNAL SOURCES:
+  Hash:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Hash: c0a1ed40de9935617473d491132fd1fd83bc72a8
+
+PODFILE CHECKSUM: d5021c5442f326686b4bcb68522ccda7061d1933
+
+COCOAPODS: 1.7.1
