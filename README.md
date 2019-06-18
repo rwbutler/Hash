@@ -1,4 +1,4 @@
-# Hash
+![Hash](https://raw.githubusercontent.com/rwbutler/Hash/master/docs/images/hash-banner.png)
 
 [![CI Status](http://img.shields.io/travis/rwbutler/Hash.svg?style=flat)](https://travis-ci.org/rwbutler/Hash)
 [![Version](https://img.shields.io/cocoapods/v/Hash.svg?style=flat)](http://cocoapods.org/pods/Hash)
@@ -19,6 +19,7 @@ Hash provides a convenient means of converting a message in Swift Data or String
 - [Author](#author)
 - [License](#license)
 - [Additional Software](#additional-software)
+	- [Controls](#controls)
 	- [Frameworks](#frameworks)
 	- [Tools](#tools)
 
