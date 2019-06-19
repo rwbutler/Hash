@@ -13,16 +13,17 @@ class Tests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        XCTAssert(true, "Pass")
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure() {
-            // Put the code you want to measure the time of here.
+    func testHashFunctionProducesExpectedString() {
+        for hashFunction in HashAlgorithm.allCases {
+            guard let hash = Hash(message: "Hello World!", algorithm: hashFunction) else {
+                XCTFail("Hash object should be non-nil")
+                return
+            }
+            let hexString = hash.string()
+            let expectedString = hashFunction.expectedString
+            XCTAssert(hexString == expectedString, "Hex string should match expected value for algorithm \(hashFunction.description).")
         }
+        
     }
     
 }

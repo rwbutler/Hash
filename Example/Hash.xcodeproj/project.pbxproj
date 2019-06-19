@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		132D23D322BA5F6D00B5938E /* HashAlgorithm+ExpectedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132D23D122BA5F6100B5938E /* HashAlgorithm+ExpectedString.swift */; };
 		3D10E71A9361D70D9AE9AAC8 /* Pods_Hash_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C704F2940752051C1BBDC08 /* Pods_Hash_Example.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		0C704F2940752051C1BBDC08 /* Pods_Hash_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hash_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		132D23D122BA5F6100B5938E /* HashAlgorithm+ExpectedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HashAlgorithm+ExpectedString.swift"; sourceTree = "<group>"; };
 		2B4D578ED892D3DA62A8AABB /* Hash.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Hash.podspec; path = ../Hash.podspec; sourceTree = "<group>"; };
 		37511F377E825AE5FBC8D6E7 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		3DCD2A53D822830A0AFC5BF3 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				132D23D122BA5F6100B5938E /* HashAlgorithm+ExpectedString.swift */,
 				607FACEB1AFB9204008FA782 /* Tests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
@@ -339,6 +342,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				132D23D322BA5F6D00B5938E /* HashAlgorithm+ExpectedString.swift in Sources */,
 				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -510,10 +514,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A8FE7855F9224AA4A50D255F /* Pods-Hash_Tests.debug.xcconfig */;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -531,10 +532,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 934AB20D2D6F0AAD1317F698 /* Pods-Hash_Tests.release.xcconfig */;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
