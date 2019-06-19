@@ -17,6 +17,9 @@ class ViewController: UIViewController {
         if let messageDigest = Hash(message: "Hello World!", algorithm: .sha256) {
             print(messageDigest.string())
         }
+        if let hmac = HMAC(message: "Hello World!", key: "123", algorithm: .sha1) {
+            print(hmac.string())
+        }
     }
 
     override func didReceiveMemoryWarning() {

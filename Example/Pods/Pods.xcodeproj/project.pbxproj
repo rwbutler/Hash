@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		132D23D522BA6A6D00B5938E /* HMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132D23D422BA6A6D00B5938E /* HMAC.swift */; };
 		13BA560A22A7C90C00342C78 /* Hash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BA560822A7C90C00342C78 /* Hash.swift */; };
 		13BA560B22A7C90C00342C78 /* HashAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13BA560922A7C90C00342C78 /* HashAlgorithm.swift */; };
 		2F8BD05949E34D1843F1488E420EBF1C /* Hash-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E2E97E316CA5D4810A11AA1922678BFE /* Hash-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -40,6 +41,7 @@
 /* Begin PBXFileReference section */
 		0DA449A2E999FC7FD661AD4CB70B52DB /* Hash.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Hash.xcconfig; sourceTree = "<group>"; };
 		119D8CF4C4601F731B7772DFF1FEBB53 /* Pods-Hash_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Hash_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		132D23D422BA6A6D00B5938E /* HMAC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMAC.swift; sourceTree = "<group>"; };
 		13BA560822A7C90C00342C78 /* Hash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hash.swift; path = Hash/Classes/Hash.swift; sourceTree = "<group>"; };
 		13BA560922A7C90C00342C78 /* HashAlgorithm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HashAlgorithm.swift; path = Hash/Classes/HashAlgorithm.swift; sourceTree = "<group>"; };
 		2534C2C667B2AEF1DB824E240466F270 /* Pods-Hash_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Hash_Example-dummy.m"; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				13BA560822A7C90C00342C78 /* Hash.swift */,
+				132D23D422BA6A6D00B5938E /* HMAC.swift */,
 				13BA560922A7C90C00342C78 /* HashAlgorithm.swift */,
 				571C05BA36E5B514CBF07F6F3CFA4432 /* Pod */,
 				12C539A87AC8BD82FFBE0079BC26511D /* Support Files */,
@@ -391,6 +394,7 @@
 			files = (
 				13BA560B22A7C90C00342C78 /* HashAlgorithm.swift in Sources */,
 				F0949F113649DD30AE18962FF1FB8950 /* Hash-dummy.m in Sources */,
+				132D23D522BA6A6D00B5938E /* HMAC.swift in Sources */,
 				13BA560A22A7C90C00342C78 /* Hash.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -30,7 +30,7 @@ import CommonCrypto
     
     public func data() -> Data {
         let data = message
-        let length = bufferSize()
+        let length = hashAlgorithm.digestLength()
         var digestData = Data(count: length)
         _ = digestData.withUnsafeMutableBytes { digestBytes -> UInt8 in
             data.withUnsafeBytes { messageBytes -> UInt8 in
@@ -67,31 +67,6 @@ import CommonCrypto
     
     public func string() -> String {
         return data().map { String(format: "%02hhx", $0) }.joined()
-    }
-    
-}
-
-private extension Hash {
-    
-    func bufferSize() -> Int {
-        switch hashAlgorithm {
-        case .md2:
-            return Int(CC_MD2_DIGEST_LENGTH)
-        case .md4:
-            return Int(CC_MD4_DIGEST_LENGTH)
-        case .md5:
-            return Int(CC_MD5_DIGEST_LENGTH)
-        case .sha1:
-            return Int(CC_SHA1_DIGEST_LENGTH)
-        case .sha224:
-            return Int(CC_SHA224_DIGEST_LENGTH)
-        case .sha256:
-            return Int(CC_SHA256_DIGEST_LENGTH)
-        case .sha384:
-            return Int(CC_SHA384_DIGEST_LENGTH)
-        case .sha512:
-            return Int(CC_SHA512_DIGEST_LENGTH)
-        }
     }
     
 }

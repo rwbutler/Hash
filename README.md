@@ -9,13 +9,15 @@
 [![Swift 5.0](https://img.shields.io/badge/Swift-5.0-orange.svg?style=flat)](https://swift.org/)
 [![Reviewed by Hound](https://img.shields.io/badge/Reviewed_by-Hound-8E64B0.svg)](https://houndci.com)
 
-Hash provides a convenient means of converting a message in Swift Data or String format to a hash / message digest using one of the following hash functions: MD2 MD4, MD5, SHA-1, SHA224, SHA-256, SHA-384 or SHA-512.
+Hash provides a convenient means of converting a message in Swift Data or String format to a message digest (hashing) or generating a HMAC using one of the following hash functions: MD2 MD4, MD5, SHA-1, SHA224, SHA-256, SHA-384 or SHA-512.
 
 - [Features](#features)
 - [Installation](#installation)
 	- [Cocoapods](#cocoapods)
 	- [Carthage](#carthage)
 - [Usage](#usage)
+	- [Message Digests (Hashing)](#message-digests-hashing)
+	- [HMACs](#hmacs)
 - [Author](#author)
 - [License](#license)
 - [Additional Software](#additional-software)
@@ -25,7 +27,9 @@ Hash provides a convenient means of converting a message in Swift Data or String
 
 ## Features
 
+- [x] Lightweight and easy to use interface.
 - [x] Support for hashing using the following popular algorithms: MD2 MD4, MD5, SHA-1, SHA224, SHA-256, SHA-384 or SHA-512.
+- [x] Support for generating HMACs using the following popular algorithms: MD5, SHA-1, SHA224, SHA-256, SHA-384 or SHA-512.
 - [x] Compatible with iOS 8.0 and above.
 
 ## Installation
@@ -75,6 +79,8 @@ For more information [see here](https://github.com/Carthage/Carthage#quick-start
 
 For an example of how to use Hash, see the sample app in the [Example](./Example) directory.
 
+### Message Digests (Hashing)
+
 ```swift
 if let hash = Hash(message: "Hello World!", algorithm: .sha256) {
     print(hash.string())
@@ -84,6 +90,18 @@ if let hash = Hash(message: "Hello World!", algorithm: .sha256) {
 Prints:
 
 `7f83b1657ff1fc53b92dc18148a1d65dfc2d4b1fa3d677284addd200126d9069`
+
+### HMACs
+
+```swift
+if let hash = HMAC(message: "Hello World!", key: "123", algorithm: .sha1) {
+    print(hash.string())
+}
+```
+
+Prints:
+
+`‌5471001127ed5f6261576c66033d9cbe37c7c91e`
 
 ## Author
 
