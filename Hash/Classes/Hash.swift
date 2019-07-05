@@ -8,16 +8,18 @@
 import Foundation
 import CommonCrypto
 
-@objcMembers public class Hash: NSObject {
+public typealias MessageDigest = Hash
+
+@objcMembers public class Hash: NSObject, HexStringConvertible {
     
     public typealias Algorithm = HashAlgorithm
     
+    private let algorithm: Algorithm
     private let message: Data
-    private let hashAlgorithm: Algorithm
     
     public init(message: Data, algorithm: Algorithm) {
         self.message = message
-        self.hashAlgorithm = algorithm
+        self.algorithm = algorithm
     }
     
     public init?(message: String, encoding: String.Encoding = .utf8, algorithm: Algorithm) {
@@ -25,18 +27,18 @@ import CommonCrypto
             return nil
         }
         self.message = messageData
-        self.hashAlgorithm = algorithm
+        self.algorithm = algorithm
     }
     
     public func data() -> Data {
         let data = message
-        let length = hashAlgorithm.digestLength()
+        let length = algorithm.digestLength()
         var digestData = Data(count: length)
         _ = digestData.withUnsafeMutableBytes { digestBytes -> UInt8 in
             data.withUnsafeBytes { messageBytes -> UInt8 in
                 if let baseAddress = messageBytes.baseAddress, let digestBytes = digestBytes.bindMemory(to: UInt8.self).baseAddress {
                     let messageLength = CC_LONG(data.count)
-                    switch hashAlgorithm {
+                    switch algorithm {
                     case .md2:
                         CC_MD2(baseAddress, messageLength, digestBytes)
                     case .md4:
@@ -63,10 +65,6 @@ import CommonCrypto
     
     override public var description: String {
         return string()
-    }
-    
-    public func string() -> String {
-        return data().map { String(format: "%02hhx", $0) }.joined()
     }
     
 }

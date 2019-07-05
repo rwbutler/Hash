@@ -8,7 +8,7 @@
 import Foundation
 import CommonCrypto
 
-@objcMembers public class HMAC: NSObject {
+@objcMembers public class HMAC: NSObject, HexStringConvertible {
     
     public typealias Algorithm = HashAlgorithm
     
@@ -54,10 +54,6 @@ import CommonCrypto
     
     override public var description: String {
         return string()
-    }
-    
-    public func string() -> String {
-        return data().map { String(format: "%02hhx", $0) }.joined()
     }
     
 }
