@@ -38,7 +38,7 @@ class Tests: XCTestCase {
     
     func testAES128CipherProducesExpectedString() {
         guard let cipherText = CipherText(message: "Hello World!", key: "0123456789012345", iv: "0123456789012345", algorithm: .aes128) else {
-            XCTFail("HMAC should be non-nil.")
+            XCTFail("It is possible to encrypt using the provided values.")
             return
         }
         let hexString = cipherText.string()
@@ -48,12 +48,52 @@ class Tests: XCTestCase {
     
     func testAES128CipherWithoutIVProducesExpectedString() {
         guard let cipherText = CipherText(message: "Hello World!", key: "0123456789012345", iv: nil, algorithm: .aes128) else {
-            XCTFail("HMAC should be non-nil.")
+            XCTFail("It is possible to encrypt using the provided values.")
             return
         }
         let hexString = cipherText.string()
         let expectedString = "0f43d4b2a5f529fce9049e80f7c60761"
         XCTAssert(hexString == expectedString, "Hex string should match expected value for algorithm \(Cipher.aes128.description).")
+    }
+    
+    func testAES192CipherProducesExpectedString() {
+        guard let cipherText = CipherText(message: "Hello World!", key: "012345678901234567890123", iv: "0123456789012345", algorithm: .aes192) else {
+            XCTFail("It is possible to encrypt using the provided values.")
+            return
+        }
+        let hexString = cipherText.string()
+        let expectedString = "4141c737e097372dc157741e3405526b"
+        XCTAssert(hexString == expectedString, "Hex string should match expected value for algorithm \(Cipher.aes192.description).")
+    }
+    
+    func testAES192CipherWithoutIVProducesExpectedString() {
+        guard let cipherText = CipherText(message: "Hello World!", key: "012345678901234567890123", iv: nil, algorithm: .aes192) else {
+            XCTFail("It is possible to encrypt using the provided values.")
+            return
+        }
+        let hexString = cipherText.string()
+        let expectedString = "4bd65c154f1f6011b51c08bab1953160"
+        XCTAssert(hexString == expectedString, "Hex string should match expected value for algorithm \(Cipher.aes192.description).")
+    }
+    
+    func testAES256CipherProducesExpectedString() {
+        guard let cipherText = CipherText(message: "Hello World!", key: "01234567890123450123456789012345", iv: "0123456789012345", algorithm: .aes256) else {
+            XCTFail("It is possible to encrypt using the provided values.")
+            return
+        }
+        let hexString = cipherText.string()
+        let expectedString = "6a790fe6c15590a6434d3ee3a866d327"
+        XCTAssert(hexString == expectedString, "Hex string should match expected value for algorithm \(Cipher.aes256.description).")
+    }
+    
+    func testAES256CipherWithoutIVProducesExpectedString() {
+        guard let cipherText = CipherText(message: "Hello World!", key: "01234567890123450123456789012345", iv: nil, algorithm: .aes256) else {
+            XCTFail("It is possible to encrypt using the provided values.")
+            return
+        }
+        let hexString = cipherText.string()
+        let expectedString = "739d542666ae1f58913b4a3b76b35d52"
+        XCTAssert(hexString == expectedString, "Hex string should match expected value for algorithm \(Cipher.aes256.description).")
     }
     
 }
