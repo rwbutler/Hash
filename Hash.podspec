@@ -1,10 +1,10 @@
 Pod::Spec.new do |s|
 s.name             = 'Hash'
-s.version          = '1.1.1'
+s.version          = '1.1.2'
 s.swift_version    = '5.0'
-s.summary          = 'Lightweight means of generating message digests and HMACs using popular hash functions including MD5, SHA-1, SHA-256.'
+s.summary          = 'Lightweight means of generating message digests & HMACs with support for AES encryption / decryption.'
 s.description      = <<-DESC
-Provides a convenient means of generating message digests / HMACs from Swift Strings or Data using popular hash functions including MD2, MD4, MD5, SHA-1, SHA224, SHA-256, SHA-384 or SHA-512.
+Provides a convenient means of generating message digests / HMACs from Swift Strings or Data using popular hash functions including MD2, MD4, MD5, SHA-1, SHA224, SHA-256, SHA-384 or SHA-512. Also supports encryption and decryption using AES-128.
                        DESC
 s.homepage         = 'https://github.com/rwbutler/Hash'
 s.license          = { :type => 'MIT', :file => 'LICENSE' }

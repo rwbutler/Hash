@@ -46,4 +46,14 @@ class Tests: XCTestCase {
         XCTAssert(hexString == expectedString, "Hex string should match expected value for algorithm \(Cipher.aes128.description).")
     }
     
+    func testAES128CipherWithoutIVProducesExpectedString() {
+        guard let cipherText = CipherText(message: "Hello World!", key: "0123456789012345", iv: nil, algorithm: .aes128) else {
+            XCTFail("HMAC should be non-nil.")
+            return
+        }
+        let hexString = cipherText.string()
+        let expectedString = "0f43d4b2a5f529fce9049e80f7c60761"
+        XCTAssert(hexString == expectedString, "Hex string should match expected value for algorithm \(Cipher.aes128.description).")
+    }
+    
 }
