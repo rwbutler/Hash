@@ -10,7 +10,7 @@ import CommonCrypto
 
 public typealias MessageDigest = Hash
 
-@objcMembers public class Hash: NSObject, HexStringConvertible {
+@objcMembers public class Hash: NSObject, StringRepresentable {
     
     public typealias Algorithm = HashAlgorithm
     
@@ -64,7 +64,7 @@ public typealias MessageDigest = Hash
     }
     
     override public var description: String {
-        return string()
+        return string(representation: .hex)
     }
     
 }

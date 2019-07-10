@@ -10,7 +10,7 @@ import CommonCrypto
 
 public typealias CipherText = EncryptedData
 
-public class EncryptedData: NSObject, Cryptable, HexStringConvertible {
+public class EncryptedData: NSObject, Cryptable, StringRepresentable {
 
     // MARK: - Type definitions
     public typealias Algorithm = EncryptionAlgorithm
@@ -45,7 +45,7 @@ public class EncryptedData: NSObject, Cryptable, HexStringConvertible {
     }
     
     override public var description: String {
-        return string()
+        return string(representation: .hex)
     }
     
 }

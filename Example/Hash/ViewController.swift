@@ -15,10 +15,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         if let messageDigest = Hash(message: "Hello World!", algorithm: .sha256) {
-            print(messageDigest.string())
+            print(messageDigest.description)
         }
         if let hmac = HMAC(message: "Hello World!", key: "123", algorithm: .sha1) {
-            print(hmac.string())
+            print(hmac.description)
         }
     }
 

@@ -9,7 +9,7 @@
 [![Swift 5.0](https://img.shields.io/badge/Swift-5.0-orange.svg?style=flat)](https://swift.org/)
 [![Reviewed by Hound](https://img.shields.io/badge/Reviewed_by-Hound-8E64B0.svg)](https://houndci.com)
 
-Hash provides a convenient means of converting a message in Swift Data or String format to a message digest (hashing) or generating a HMAC using one of the following hash functions: MD2 MD4, MD5, SHA-1, SHA224, SHA-256, SHA-384 or SHA-512.
+Hash provides a convenient means of converting a message in Swift Data or String format to a message digest (hashing) or generating a HMAC using one of the following hash functions: MD2 MD4, MD5, SHA-1, SHA224, SHA-256, SHA-384 or SHA-512. Also supported are encryption and decryption using AES-128, AES-192 or AES-256.
 
 - [Features](#features)
 - [Installation](#installation)
@@ -18,6 +18,8 @@ Hash provides a convenient means of converting a message in Swift Data or String
 - [Usage](#usage)
 	- [Message Digests (Hashing)](#message-digests-hashing)
 	- [HMACs](#hmacs)
+	- [Encryption](#encryption)
+	- [Decryption](#decryption)
 - [Author](#author)
 - [License](#license)
 - [Additional Software](#additional-software)
@@ -30,6 +32,7 @@ Hash provides a convenient means of converting a message in Swift Data or String
 - [x] Lightweight and easy to use interface.
 - [x] Support for hashing using the following popular algorithms: MD2 MD4, MD5, SHA-1, SHA224, SHA-256, SHA-384 or SHA-512.
 - [x] Support for generating HMACs using the following popular algorithms: MD5, SHA-1, SHA224, SHA-256, SHA-384 or SHA-512.
+- [x] Support for encryption & decryption using AES-128, AES-192 or AES-256.
 - [x] Compatible with iOS 8.0 and above.
 
 ## Installation
@@ -83,7 +86,7 @@ For an example of how to use Hash, see the sample app in the [Example](./Example
 
 ```swift
 if let hash = Hash(message: "Hello World!", algorithm: .sha256) {
-    print(hash.string())
+    print(hash)
 }
 ```
 
@@ -95,13 +98,43 @@ Prints:
 
 ```swift
 if let hash = HMAC(message: "Hello World!", key: "123", algorithm: .sha1) {
-    print(hash.string())
+    print(hash)
 }
 ```
 
 Prints:
 
 `‌5471001127ed5f6261576c66033d9cbe37c7c91e`
+
+### Encryption
+
+Currently supported encryption algorithms are: AES-128, AES-192 and AES-256.
+
+```swift
+if let cipherText = CipherText(message: "Hello World!", key: "01234567890123450123456789012345", iv: "0123456789012345", algorithm: .aes256) {
+    print(cipherText)
+}
+```
+
+Prints:
+
+`‌6a790fe6c15590a6434d3ee3a866d327`
+
+### Decryption
+
+Currently supported decryption algorithms are: AES-128, AES-192 and AES-256.
+
+```swift
+if let cipherText = Data(hex: "6a790fe6c15590a6434d3ee3a866d327"),
+	let keyData = "01234567890123450123456789012345".data(using: .utf8) {
+        let plainText = PlainText(message: message, key: keyData, iv: "0123456789012345".data(using: .utf8), algorithm: .aes256)
+    print(plainText)
+}
+```
+
+Prints:
+
+`‌Hello World!`
 
 ## Author
 

@@ -7,14 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1375E2EB22CF5AFE003AC429 /* EncryptionAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1375E2E422CF5AFE003AC429 /* EncryptionAlgorithm.swift */; };
-		1375E2EC22CF5AFE003AC429 /* Hash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1375E2E522CF5AFE003AC429 /* Hash.swift */; };
-		1375E2ED22CF5AFE003AC429 /* HMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1375E2E622CF5AFE003AC429 /* HMAC.swift */; };
-		1375E2EE22CF5AFE003AC429 /* Cryptable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1375E2E722CF5AFE003AC429 /* Cryptable.swift */; };
-		1375E2EF22CF5AFE003AC429 /* DecryptedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1375E2E822CF5AFE003AC429 /* DecryptedData.swift */; };
-		1375E2F022CF5AFE003AC429 /* HashAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1375E2E922CF5AFE003AC429 /* HashAlgorithm.swift */; };
-		1375E2F122CF5AFE003AC429 /* EncryptedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1375E2EA22CF5AFE003AC429 /* EncryptedData.swift */; };
-		1375E2F722CF9218003AC429 /* HexStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1375E2F622CF9218003AC429 /* HexStringConvertible.swift */; };
+		1375E32022D63048003AC429 /* StringRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1375E31322D63048003AC429 /* StringRepresentable.swift */; };
+		1375E32122D63048003AC429 /* StringAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1375E31422D63048003AC429 /* StringAdditions.swift */; };
+		1375E32222D63048003AC429 /* DataAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1375E31522D63048003AC429 /* DataAdditions.swift */; };
+		1375E32322D63048003AC429 /* Hash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1375E31722D63048003AC429 /* Hash.swift */; };
+		1375E32422D63048003AC429 /* HashAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1375E31822D63048003AC429 /* HashAlgorithm.swift */; };
+		1375E32522D63048003AC429 /* EncryptionAlgorithm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1375E31A22D63048003AC429 /* EncryptionAlgorithm.swift */; };
+		1375E32622D63048003AC429 /* EncryptedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1375E31B22D63048003AC429 /* EncryptedData.swift */; };
+		1375E32722D63048003AC429 /* DecryptedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1375E31C22D63048003AC429 /* DecryptedData.swift */; };
+		1375E32822D63048003AC429 /* Cryptable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1375E31D22D63048003AC429 /* Cryptable.swift */; };
+		1375E32922D63048003AC429 /* HMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1375E31F22D63048003AC429 /* HMAC.swift */; };
 		2F8BD05949E34D1843F1488E420EBF1C /* Hash-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E2E97E316CA5D4810A11AA1922678BFE /* Hash-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3A23FC3C455689ADF5C885AB017A0F67 /* Pods-Hash_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D81AFEF7B0C048046DD4335A64DA58C /* Pods-Hash_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6601C40A2E3474CB1B7365D3677D8145 /* Pods-Hash_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2534C2C667B2AEF1DB824E240466F270 /* Pods-Hash_Example-dummy.m */; };
@@ -46,14 +48,16 @@
 /* Begin PBXFileReference section */
 		0DA449A2E999FC7FD661AD4CB70B52DB /* Hash.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Hash.xcconfig; sourceTree = "<group>"; };
 		119D8CF4C4601F731B7772DFF1FEBB53 /* Pods-Hash_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Hash_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		1375E2E422CF5AFE003AC429 /* EncryptionAlgorithm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EncryptionAlgorithm.swift; path = Hash/Classes/EncryptionAlgorithm.swift; sourceTree = "<group>"; };
-		1375E2E522CF5AFE003AC429 /* Hash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hash.swift; path = Hash/Classes/Hash.swift; sourceTree = "<group>"; };
-		1375E2E622CF5AFE003AC429 /* HMAC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HMAC.swift; path = Hash/Classes/HMAC.swift; sourceTree = "<group>"; };
-		1375E2E722CF5AFE003AC429 /* Cryptable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Cryptable.swift; path = Hash/Classes/Cryptable.swift; sourceTree = "<group>"; };
-		1375E2E822CF5AFE003AC429 /* DecryptedData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DecryptedData.swift; path = Hash/Classes/DecryptedData.swift; sourceTree = "<group>"; };
-		1375E2E922CF5AFE003AC429 /* HashAlgorithm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HashAlgorithm.swift; path = Hash/Classes/HashAlgorithm.swift; sourceTree = "<group>"; };
-		1375E2EA22CF5AFE003AC429 /* EncryptedData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EncryptedData.swift; path = Hash/Classes/EncryptedData.swift; sourceTree = "<group>"; };
-		1375E2F622CF9218003AC429 /* HexStringConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HexStringConvertible.swift; path = Hash/Classes/HexStringConvertible.swift; sourceTree = "<group>"; };
+		1375E31322D63048003AC429 /* StringRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringRepresentable.swift; sourceTree = "<group>"; };
+		1375E31422D63048003AC429 /* StringAdditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringAdditions.swift; sourceTree = "<group>"; };
+		1375E31522D63048003AC429 /* DataAdditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataAdditions.swift; sourceTree = "<group>"; };
+		1375E31722D63048003AC429 /* Hash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hash.swift; sourceTree = "<group>"; };
+		1375E31822D63048003AC429 /* HashAlgorithm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HashAlgorithm.swift; sourceTree = "<group>"; };
+		1375E31A22D63048003AC429 /* EncryptionAlgorithm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncryptionAlgorithm.swift; sourceTree = "<group>"; };
+		1375E31B22D63048003AC429 /* EncryptedData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncryptedData.swift; sourceTree = "<group>"; };
+		1375E31C22D63048003AC429 /* DecryptedData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecryptedData.swift; sourceTree = "<group>"; };
+		1375E31D22D63048003AC429 /* Cryptable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cryptable.swift; sourceTree = "<group>"; };
+		1375E31F22D63048003AC429 /* HMAC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HMAC.swift; sourceTree = "<group>"; };
 		2534C2C667B2AEF1DB824E240466F270 /* Pods-Hash_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Hash_Example-dummy.m"; sourceTree = "<group>"; };
 		2DE51AB76DE8B78BF9B33BBED09DB93F /* Pods-Hash_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Hash_Tests-dummy.m"; sourceTree = "<group>"; };
 		2F56E06C4BD14BAC62B5F12A52265DA6 /* Pods-Hash_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Hash_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -127,17 +131,55 @@
 			path = "Example/Pods/Target Support Files/Hash";
 			sourceTree = "<group>";
 		};
+		1375E31222D63048003AC429 /* String */ = {
+			isa = PBXGroup;
+			children = (
+				1375E31322D63048003AC429 /* StringRepresentable.swift */,
+				1375E31422D63048003AC429 /* StringAdditions.swift */,
+				1375E31522D63048003AC429 /* DataAdditions.swift */,
+			);
+			name = String;
+			path = Hash/Classes/String;
+			sourceTree = "<group>";
+		};
+		1375E31622D63048003AC429 /* Message Digest */ = {
+			isa = PBXGroup;
+			children = (
+				1375E31722D63048003AC429 /* Hash.swift */,
+				1375E31822D63048003AC429 /* HashAlgorithm.swift */,
+			);
+			name = "Message Digest";
+			path = "Hash/Classes/Message Digest";
+			sourceTree = "<group>";
+		};
+		1375E31922D63048003AC429 /* Cryptography */ = {
+			isa = PBXGroup;
+			children = (
+				1375E31A22D63048003AC429 /* EncryptionAlgorithm.swift */,
+				1375E31B22D63048003AC429 /* EncryptedData.swift */,
+				1375E31C22D63048003AC429 /* DecryptedData.swift */,
+				1375E31D22D63048003AC429 /* Cryptable.swift */,
+			);
+			name = Cryptography;
+			path = Hash/Classes/Cryptography;
+			sourceTree = "<group>";
+		};
+		1375E31E22D63048003AC429 /* Message Authentication Codes */ = {
+			isa = PBXGroup;
+			children = (
+				1375E31F22D63048003AC429 /* HMAC.swift */,
+			);
+			name = "Message Authentication Codes";
+			path = "Hash/Classes/Message Authentication Codes";
+			sourceTree = "<group>";
+		};
 		3F098001F2152C59EB25C344FE73D7E3 /* Hash */ = {
 			isa = PBXGroup;
 			children = (
-				1375E2E722CF5AFE003AC429 /* Cryptable.swift */,
-				1375E2E822CF5AFE003AC429 /* DecryptedData.swift */,
-				1375E2EA22CF5AFE003AC429 /* EncryptedData.swift */,
-				1375E2E422CF5AFE003AC429 /* EncryptionAlgorithm.swift */,
-				1375E2E522CF5AFE003AC429 /* Hash.swift */,
-				1375E2E922CF5AFE003AC429 /* HashAlgorithm.swift */,
-				1375E2F622CF9218003AC429 /* HexStringConvertible.swift */,
-				1375E2E622CF5AFE003AC429 /* HMAC.swift */,
+				1375E31922D63048003AC429 /* Cryptography */,
+				1375E31E22D63048003AC429 /* Message Authentication Codes */,
+				1375E31622D63048003AC429 /* Message Digest */,
+				1375E31222D63048003AC429 /* String */,
 				571C05BA36E5B514CBF07F6F3CFA4432 /* Pod */,
 				12C539A87AC8BD82FFBE0079BC26511D /* Support Files */,
 			);
@@ -407,15 +449,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1375E2F722CF9218003AC429 /* HexStringConvertible.swift in Sources */,
-				1375E2EB22CF5AFE003AC429 /* EncryptionAlgorithm.swift in Sources */,
-				1375E2EE22CF5AFE003AC429 /* Cryptable.swift in Sources */,
-				1375E2EF22CF5AFE003AC429 /* DecryptedData.swift in Sources */,
-				1375E2EC22CF5AFE003AC429 /* Hash.swift in Sources */,
-				1375E2F022CF5AFE003AC429 /* HashAlgorithm.swift in Sources */,
-				1375E2ED22CF5AFE003AC429 /* HMAC.swift in Sources */,
-				1375E2F122CF5AFE003AC429 /* EncryptedData.swift in Sources */,
+				1375E32322D63048003AC429 /* Hash.swift in Sources */,
 				F0949F113649DD30AE18962FF1FB8950 /* Hash-dummy.m in Sources */,
+				1375E32722D63048003AC429 /* DecryptedData.swift in Sources */,
+				1375E32022D63048003AC429 /* StringRepresentable.swift in Sources */,
+				1375E32522D63048003AC429 /* EncryptionAlgorithm.swift in Sources */,
+				1375E32422D63048003AC429 /* HashAlgorithm.swift in Sources */,
+				1375E32822D63048003AC429 /* Cryptable.swift in Sources */,
+				1375E32122D63048003AC429 /* StringAdditions.swift in Sources */,
+				1375E32622D63048003AC429 /* EncryptedData.swift in Sources */,
+				1375E32922D63048003AC429 /* HMAC.swift in Sources */,
+				1375E32222D63048003AC429 /* DataAdditions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

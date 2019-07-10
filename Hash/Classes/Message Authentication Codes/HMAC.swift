@@ -8,7 +8,7 @@
 import Foundation
 import CommonCrypto
 
-@objcMembers public class HMAC: NSObject, HexStringConvertible {
+@objcMembers public class HMAC: NSObject, StringRepresentable {
     
     public typealias Algorithm = HashAlgorithm
     
@@ -53,7 +53,7 @@ import CommonCrypto
     }
     
     override public var description: String {
-        return string()
+        return string(representation: .hex)
     }
     
 }
