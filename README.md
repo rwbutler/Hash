@@ -127,7 +127,7 @@ Currently supported decryption algorithms are: AES-128, AES-192 and AES-256.
 ```swift
 if let cipherText = Data(hex: "6a790fe6c15590a6434d3ee3a866d327"),
 	let keyData = "01234567890123450123456789012345".data(using: .utf8) {
-        let plainText = PlainText(message: message, key: keyData, iv: "0123456789012345".data(using: .utf8), algorithm: .aes256)
+    let plainText = PlainText(message: message, key: keyData, iv: "0123456789012345".data(using: .utf8), algorithm: .aes256)
     print(plainText)
 }
 ```
