@@ -504,8 +504,9 @@
 				MODULEMAP_FILE = "Target Support Files/Hash/Hash.modulemap";
 				PRODUCT_MODULE_NAME = Hash;
 				PRODUCT_NAME = Hash;
-				SDKROOT = iphoneos;
+				SDKROOT = "";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -672,8 +673,9 @@
 				MODULEMAP_FILE = "Target Support Files/Hash/Hash.modulemap";
 				PRODUCT_MODULE_NAME = Hash;
 				PRODUCT_NAME = Hash;
-				SDKROOT = iphoneos;
+				SDKROOT = "";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;

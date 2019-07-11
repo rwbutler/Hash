@@ -1,6 +1,3 @@
-#ifdef __OBJC__
-#import <UIKit/UIKit.h>
-#else
 #ifndef FOUNDATION_EXPORT
 #if defined(__cplusplus)
 #define FOUNDATION_EXPORT extern "C"
@@ -8,8 +5,6 @@
 #define FOUNDATION_EXPORT extern
 #endif
 #endif
-#endif
-
 
 FOUNDATION_EXPORT double HashVersionNumber;
 FOUNDATION_EXPORT const unsigned char HashVersionString[];
