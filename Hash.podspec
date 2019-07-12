@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name             = 'Hash'
-s.version          = '1.3.0'
+s.version          = '1.4.0'
 s.swift_version    = '5.0'
 s.summary          = 'Lightweight means of generating message digests & HMACs with support for AES encryption / decryption.'
 s.description      = <<-DESC

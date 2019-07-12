@@ -33,7 +33,7 @@ extension Cryptable {
             inputData.withUnsafeBytes { inputBytes -> UInt8 in
                 keyData.withUnsafeBytes { keyBytes -> UInt8 in
                     let messageLength = size_t(outputBytes.count)
-                    let keyLength = size_t(algorithm.keySize())
+                    let keyLength = size_t(keyData.count)
                     if let keyBytes = keyBytes.bindMemory(to: UInt8.self).baseAddress,
                         let inputBytes = inputBytes.bindMemory(to: UInt8.self).baseAddress,
                         let outputBytes = outputBytes.bindMemory(to: UInt8.self).baseAddress {
