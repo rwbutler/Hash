@@ -15,6 +15,7 @@ Hash provides a convenient means of converting a message in Swift Data or String
 - [Installation](#installation)
 	- [Cocoapods](#cocoapods)
 	- [Carthage](#carthage)
+	- [Swift Package Manager](#swift-package-manager)
 - [Usage](#usage)
 	- [Message Digests (Hashing)](#message-digests-hashing)
 	- [HMACs](#hmacs)
@@ -77,6 +78,18 @@ github "rwbutler/Hash"
 From the macOS Terminal run `carthage update --platform iOS` to build the framework then drag `Hash.framework` into your Xcode project.
 
 For more information [see here](https://github.com/Carthage/Carthage#quick-start).
+
+### Swift Package Manager
+
+The [Swift Package Manager](https://swift.org/package-manager/) is a dependency manager for Swift modules and is included as part of the build system as of Swift 3.0. It is used to automate the download, compilation and linking of dependencies.
+
+To include Hash as a dependency within a Swift package, add the package to the `dependencies` entry in your `Package.swift` file as follows:
+
+```swift
+dependencies: [
+    .package(url: "https://github.com/rwbutler/Hash.git", from: "1.0.0")
+]
+```
 
 ## Usage
 
