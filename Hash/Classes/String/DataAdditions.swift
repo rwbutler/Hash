@@ -30,3 +30,11 @@ public extension Data {
     }
     
 }
+
+extension Data: StringRepresentable {
+    
+    public func data() -> Data {
+        self
+    }
+    
+}
